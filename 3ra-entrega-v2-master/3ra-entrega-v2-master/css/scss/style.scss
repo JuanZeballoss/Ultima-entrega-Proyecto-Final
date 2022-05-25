@@ -1,0 +1,495 @@
+@import 'fonts';
+@import 'variables';
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+    background-color: $background-color;
+}
+
+.logo {
+    display: grid;
+    position: absolute;
+}
+
+.tittlePage {
+    grid-area: tittle;
+    display: grid;
+    color: $background-color;
+    font-family: "Noto Serif";
+    text-align: center;
+    font-size: 70px;
+    letter-spacing: 8px;
+    justify-content: center;
+}
+
+.subtittlePage {
+    color: $tittle-color;
+    position: relative;
+    text-align: center;
+    font-family: "Hind";
+}
+
+main {
+    display: grid;
+    grid-auto-rows: repeat(4, auto-fit);
+    grid-template-areas:
+        'header'
+        'tittle'
+        'container'
+        'footer';
+}
+
+.tittleIndex {
+    display: grid;
+    color: $tittle-index-color;
+    font-family: "Alegreya Sans";
+    text-align: center;
+    
+    font-size: 30px;
+    letter-spacing: 8px;
+    margin-top: 10px;
+    justify-content: map-get($estilos, alineacion);
+}
+
+.tittleIndex:hover {
+    color: $tittle-index-hover-color;
+    transition: 0.2s;
+}
+
+.header {
+    grid-area: header;
+    background-color: map-get($estilos, color);
+}
+
+.container {
+    grid-area: container;
+    width: 100%;
+}
+
+.menu {
+    display: inline-block;
+}
+
+ul.menu {
+    display: block;
+    text-align: center;
+}
+
+.menu li {
+    display: inline-block;
+}
+
+.menu li a {
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 50;
+    text-transform: uppercase;
+    color: $background-color;
+    display: inline-block;
+    padding: 15px;
+    margin: 15px;
+    word-spacing: 1px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.menu li a:hover {
+    color: $menu-hoover-color;
+    background-color: $menu-border-hoover-color;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+#submenu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: $panels-color;
+    border-radius: 0px 0px 20px 20px;
+    margin-left: 0px;
+}
+
+ul#submenu li {
+    display: none;
+}
+
+:hover>ul#submenu li {
+    display: block;
+}
+
+#submenu :hover {
+    transform: scale(110%);
+    color: $submenu-animation-color;
+    width: auto;
+    background-color: $submenu-hover-color;
+    border-radius: 10%;
+    transition: 0.5s;
+}
+
+.promo1 {
+    width: auto;
+    height: 500px;
+    border-radius: 20px;
+}
+
+.promo1:hover {
+    transform: scale(1.2);
+    transition: 0.2s;
+}
+
+/* Grids en html productos*/
+.gridContainerAntiage {
+    display: grid;
+    padding: 50px;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    grid-auto-rows: minmax(200px, auto);
+}
+
+.antiageItem1 {
+    height: 500px;
+}
+
+.antiageItem1:hover {
+    transform: scale(1.050);
+    transition: all 0.5s;
+}
+
+.antiageItem2 {
+    height: 500px;
+}
+
+.antiageItem2:hover {
+    @extend.antiageItem1:hover
+}
+
+.antiageItem3 {
+    height: 500px;
+}
+
+.antiageItem3:hover {
+    @extend.antiageItem1:hover
+}
+
+.antiageItem4 {
+    height: 500px;
+}
+
+.antiageItem4:hover {
+    @extend.antiageItem1:hover
+}
+
+.antiageItem5 {
+    height: 500px;
+}
+
+.antiageItem5:hover {
+    @extend.antiageItem1:hover
+}
+
+.antiageItem6 {
+    height: 500px;
+}
+
+.antiageItem6:hover {
+    @extend.antiageItem1:hover
+    
+}
+
+.tittle2 {
+    text-align: center;
+    background-color: $background-color;
+    color: $tittle2-color;
+    font-size: 50px;
+    font-family: "Alegreya Sans";
+    text-transform: uppercase;
+    margin-top: 40px;
+}
+
+.subTittle2 {
+    text-align: center;
+    font-family: "Noto Serif";
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+.container {
+    min-height: 150px;
+    font-size: 25px;
+    text-align: center;
+    font-family: "Alegreya Sans";
+    font-weight: bold;
+    width: 100%;
+    margin: auto;
+    margin-top: 50px;
+    color: $subtittle-color;
+}
+
+h4 {
+    margin-top: -100px;
+    font-size: 25px;
+    text-align: center;
+    font-family: "Alegreya Sans";
+    color: $subtittle-color;
+}
+
+h5 {
+    font-family: "Alegreya Sans";
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    color: $subtittle-color;
+    margin: 70px 80px 20px 10px;
+}
+
+
+.iframes {
+    display: grid;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+
+
+.tittle3 {
+    font-family: "Alegreya Sans";
+    color: $panels-color;
+    letter-spacing: 3px;
+    font-size: 30px;
+}
+
+
+legend {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-family: "Alegreya Sans";
+    color: $subtittle-color;
+}
+
+.animationSocialMedia {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+#face {
+    margin-right: 20px;
+}
+
+#wsp {
+    margin-left: 20px;
+}
+
+
+.animationSocialMedia :hover {
+    margin-left: 20px;
+    margin-right: 20px;
+    transition: 0.1s;
+    transform: scale(150%);
+}
+
+.hamb {
+    display: none;
+}
+
+.check1 {
+    display: none;
+}
+
+
+
+
+
+
+
+.tittle3 {
+
+    position: absolute;
+    bottom: 0;
+
+}
+
+footer {
+    display: grid;
+    background-color: $panels-color;
+    position: static;
+    bottom: 0;
+    width: 100%;
+    grid-area: footer;
+    align-items: center;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.footerText {
+    color:$tittle-color;
+    font-family: "Alegreya Sans";
+    font-size: 30px;
+}
+
+@media (max-width: 768px) {
+
+    .hamb {
+        display: flex;
+        height: 40px;
+        float: right;
+        margin-top: 24px;
+        cursor: pointer;
+    }
+
+    .menu li {
+        width: 100%;
+        bottom: 0;
+        top: 80px;
+        background-color: $panels-color;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    #submenu {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        margin: auto;
+        font-size: 5px;
+        border-radius: 0;
+    }
+
+    #submenu :hover {
+        color: $submenu-hover-color;
+        background-color: $panels-color;
+        transition: 0.5s;
+    }
+
+    .menu li a {
+        font-size: 20px;
+        border: 0px;
+        border-radius: 0px;
+    }
+
+    main {
+        display: grid;
+        grid-template-rows: repeat(6, auto);
+        grid-template-columns: 100%;
+        grid-template-areas:
+            'header'
+            'tittle'
+            'section'
+            'container'
+            'nav'
+            'footer';
+    }
+
+    #clip {
+        display: none;
+    }
+
+ 
+    .logo {
+        display: none;
+        transition: 2s;
+    }
+
+    @media (max-width: 286px) {
+
+        .tittleIndex {
+            font-size: 20px;
+        }
+
+        .promo1 {
+            height: 200px;
+        }
+    }
+
+    @media (max-width: 215px) {
+
+        .tittleIndex {
+            font-size: 13px;
+        }
+    }
+
+    @media (max-width: 448px) {
+
+        .tittlePage {
+            font-size: 60px;
+        }
+    }
+
+    @media (max-width: 394px) {
+
+        .tittlePage {
+            font-size: 50px;
+        }
+
+        .hamb {
+            height: 30px;
+        }
+
+        .footerText {
+            font-size: 25px
+        }
+
+        .iconFooter {
+            width: 23px;
+        }
+    }
+
+    @media (max-width: 334px) {
+
+        .tittlePage {
+            font-size: 25px;
+        }
+
+        .subtittlePage {
+            font-size: 12px;
+        }
+
+        .tittleIndex {
+            font-size: 20px;
+        }
+
+        .promo1 {
+            height: 250px;
+        }
+
+        .hamb {
+            height: 15px;
+        }
+    }
+
+    @media (max-width: 211px) {
+
+        .tittlePage {
+            font-size: 13px;
+        }
+
+        .hamb {
+            height: 10px;
+        }
+
+        .subtittlePage {
+            font-size: 10px;
+        }
+
+        .tittleIndex {
+            font-size: 10px;
+        }
+
+        .promo1 {
+            height: 230px;
+        }
+
+        .footerText {
+            font-size: 23px;
+        }
+    }
+}
